@@ -1,0 +1,16 @@
+# Núcleo
+neo4j>=5.20,<6            # driver oficial (Bolt)
+numpy>=1.26
+networkx>=3.2             # fallback de PageRank/Louvain e backend em memória
+requests>=2.31            # cliente HTTP para APIs de LLM/embeddings compatíveis com OpenAI
+python-dotenv>=1.0
+
+# Interface
+streamlit>=1.36
+pandas>=2.1
+
+# Testes
+pytest>=8.0
+
+# Opcional: embeddings locais (descomente e use EMBEDDING_PROVIDER=sentence-transformers)
+# sentence-transformers>=3.0
