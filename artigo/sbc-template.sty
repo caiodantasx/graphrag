@@ -1,0 +1,66 @@
+% ======================================================================
+% sbc-template.sty
+% Estilo para artigos no formato da Sociedade Brasileira de Computação (SBC).
+% Implementa as regras de formatação do modelo SBC para artigos:
+%   - papel A4; margens: superior 3,5 cm, inferior 2,5 cm, laterais 3,0 cm;
+%   - fonte Times 12 pt; recuo de 1,27 cm na primeira linha; 6 pt após parágrafos;
+%   - título 16 pt negrito centralizado; autores 12 pt negrito; endereços 12 pt;
+%   - resumo/abstract em itálico com recuo de 0,8 cm e rótulo em negrito;
+%   - seções 13 pt negrito; subseções 12 pt negrito; legendas 10 pt negrito.
+% ======================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sbc-template}[2026/10/29 Formato SBC para artigos]
+
+\RequirePackage{times}
+\RequirePackage[a4paper,top=3.5cm,bottom=2.5cm,left=3cm,right=3cm]{geometry}
+\RequirePackage{caption}
+
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{6pt}
+\renewcommand{\baselinestretch}{1.0}
+
+\captionsetup{font=small, labelfont=bf, labelsep=period, justification=centering}
+
+\makeatletter
+% ---------------------------------------------------------------- autores
+\newcommand{\inst}[1]{\unskip$^{#1}$}
+\newcommand{\email}[1]{{\fontsize{10}{12}\selectfont\ttfamily #1}}
+\newcommand{\address}[1]{\gdef\@address{#1}}
+\gdef\@address{}
+
+% ---------------------------------------------------------------- título
+\renewcommand{\maketitle}{%
+  \thispagestyle{empty}%
+  \begin{center}
+    {\fontsize{16}{20}\selectfont\bfseries \@title\par}\vspace{12pt}
+    {\fontsize{12}{14}\selectfont\bfseries \@author\par}\vspace{12pt}
+    {\fontsize{12}{14}\selectfont \@address\par}
+  \end{center}\vspace{12pt}}
+
+% ---------------------------------------------------------------- resumos
+\renewenvironment{abstract}%
+  {\begin{list}{}{\setlength{\leftmargin}{0.8cm}\setlength{\rightmargin}{0.8cm}%
+   \setlength{\parsep}{0pt}}\item\relax\itshape\textbf{Abstract.}~}%
+  {\end{list}}
+\newenvironment{resumo}%
+  {\begin{list}{}{\setlength{\leftmargin}{0.8cm}\setlength{\rightmargin}{0.8cm}%
+   \setlength{\parsep}{0pt}}\item\relax\itshape\textbf{Resumo.}~}%
+  {\end{list}}
+
+% ---------------------------------------------------------------- seções
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+  {12pt}{6pt}{\fontsize{13}{15}\selectfont\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {12pt}{6pt}{\fontsize{12}{14}\selectfont\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+  {12pt}{6pt}{\fontsize{12}{14}\selectfont\bfseries}}
+
+% ---------------------------------------------------------------- referências
+\renewenvironment{thebibliography}[1]
+  {\section*{\refname}%
+   \fontsize{12}{14}\selectfont
+   \list{}{\setlength{\leftmargin}{0.5cm}\setlength{\itemindent}{-0.5cm}%
+           \setlength{\itemsep}{3pt}\setlength{\parsep}{0pt}}%
+   \def\@biblabel##1{}\sloppy}
+  {\endlist}
+\makeatother

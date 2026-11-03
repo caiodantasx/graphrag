@@ -1,0 +1,23 @@
+[
+  {"id": "Q01", "type": "1-hop", "question": "Onde nasceu Alan Turing?", "expected": ["Londres"]},
+  {"id": "Q02", "type": "1-hop", "question": "Quem orientou o doutorado de Alan Turing?", "expected": ["Alonzo Church"]},
+  {"id": "Q03", "type": "1-hop", "question": "Quem criou a teoria da informação?", "expected": ["Claude Shannon"]},
+  {"id": "Q04", "type": "1-hop", "question": "Em qual instituição foi desenvolvido o Unix?", "expected": ["Bell Labs"]},
+  {"id": "Q05", "type": "1-hop", "question": "Quem colaborou com Charles Babbage?", "expected": ["Ada Lovelace"]},
+  {"id": "Q06", "type": "1-hop", "question": "Que linguagem influenciou a linguagem C?", "expected": ["linguagem B"]},
+  {"id": "Q07", "type": "1-hop", "question": "Quais orientandos de Alonzo Church existem no grafo?", "expected": ["Alan Turing", "Stephen Kleene"]},
+  {"id": "Q08", "type": "multi-hop", "question": "Onde trabalhava o orientador de Alan Turing?", "expected": ["Universidade de Princeton"]},
+  {"id": "Q09", "type": "multi-hop", "question": "Em que cidade nasceu o criador da linguagem C?", "expected": ["Bronxville"]},
+  {"id": "Q10", "type": "multi-hop", "question": "O Prêmio Turing foi nomeado em homenagem a alguém que estudou em qual instituição?", "expected": ["King's College"]},
+  {"id": "Q11", "type": "multi-hop", "question": "Onde nasceu a pessoa que propôs a World Wide Web?", "expected": ["Londres"]},
+  {"id": "Q12", "type": "multi-hop", "question": "Em que país fica a cidade onde nasceu John von Neumann?", "expected": ["Hungria"]},
+  {"id": "Q13", "type": "multi-hop", "question": "Quem criou o sistema TeX e onde essa pessoa trabalhou?", "expected": ["Donald Knuth", "Universidade Stanford"]},
+  {"id": "Q14", "type": "multi-hop", "question": "Em que cidade fica a instituição onde Tim Berners-Lee trabalhou?", "expected": ["Genebra"]},
+  {"id": "Q15", "type": "multi-hop", "question": "Quais pessoas que trabalharam nos Bell Labs receberam o Prêmio Turing?", "expected": ["Dennis Ritchie", "Ken Thompson"]},
+  {"id": "Q16", "type": "multi-hop", "question": "Qual linguagem criada no MIT foi influenciada por um conceito criado por Alonzo Church?", "expected": ["Lisp"]},
+  {"id": "Q17", "type": "multi-hop", "question": "Qual pessoa que estudou em Princeton criou a linguagem Lisp?", "expected": ["John McCarthy"]},
+  {"id": "Q18", "type": "caminho", "question": "Qual é a conexão entre Ada Lovelace e Claude Shannon?", "expected": ["Alan Turing"]},
+  {"id": "Q19", "type": "sem resposta", "question": "Quem orientou o doutorado de Grace Hopper?", "expected": null},
+  {"id": "Q20", "type": "sem resposta", "question": "Em que ano Dennis Ritchie ganhou o Prêmio Nobel?", "expected": null},
+  {"id": "Q21", "type": "sem resposta", "question": "Qual universidade Ada Lovelace frequentou?", "expected": null}
+]

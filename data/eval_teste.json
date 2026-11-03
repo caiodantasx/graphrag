@@ -1,0 +1,16 @@
+[
+  {"id": "T01", "type": "1-hop", "question": "Em que cidade nasceu Ada Lovelace?", "expected": ["Londres"]},
+  {"id": "T02", "type": "1-hop", "question": "Quem desenvolveu o algoritmo de Dijkstra?", "expected": ["Edsger Dijkstra"]},
+  {"id": "T03", "type": "1-hop", "question": "Qual prêmio Edsger Dijkstra recebeu?", "expected": ["Prêmio Turing"]},
+  {"id": "T04", "type": "1-hop", "question": "Quem fundou o World Wide Web Consortium?", "expected": ["Tim Berners-Lee"]},
+  {"id": "T05", "type": "1-hop", "question": "Qual organização concede o Prêmio Turing?", "expected": ["Association for Computing Machinery"]},
+  {"id": "T06", "type": "multi-hop", "question": "Onde estudou o criador do Unix?", "expected": ["Universidade Harvard", "Universidade da Califórnia em Berkeley"]},
+  {"id": "T07", "type": "multi-hop", "question": "Em que estado fica a universidade onde Donald Knuth trabalhou?", "expected": ["Califórnia"]},
+  {"id": "T08", "type": "multi-hop", "question": "Quem criou a linguagem que foi influenciada pela linguagem B?", "expected": ["Dennis Ritchie"]},
+  {"id": "T09", "type": "multi-hop", "question": "Em que país nasceu Edsger Dijkstra?", "expected": ["Países Baixos"]},
+  {"id": "T10", "type": "multi-hop", "question": "Quem trabalhou no MIT e criou a linguagem Lisp?", "expected": ["John McCarthy"]},
+  {"id": "T11", "type": "multi-hop", "question": "Quem recebeu o Prêmio Turing em 1974?", "expected": ["Donald Knuth"]},
+  {"id": "T12", "type": "caminho", "question": "Qual é a ligação entre Grace Hopper e Dennis Ritchie?", "expected": ["Universidade Harvard"]},
+  {"id": "T13", "type": "sem resposta", "question": "Em que cidade nasceu Stephen Kleene?", "expected": null},
+  {"id": "T14", "type": "sem resposta", "question": "Quem criou a linguagem Python?", "expected": null}
+]
